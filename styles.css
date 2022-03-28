@@ -1,3 +1,93 @@
+body {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #66645F;
+}
+
+body * {
+    background-color: rgb(211, 207, 207);
+}
+
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
 .container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    width: 1042px;
+    height: 100vh;
+    border: 4px solid #000;
+    margin: auto;
+}
+
+/* Header */
+
+header {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+}
+
+.week input {
+    height: 30px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+
+.week input:focus {
+    outline: none;
+}
+
+/* Left Side Schedule and Events */
+
+
+/* Right Side */
+
+.right-side * {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side span.section-header {
+    text-align: center;
+}
+
+/* To Do List Items */
+
+.to-do {
+    margin-bottom: 2rem;
+}
+
+.to-do input {
+    border-bottom: 1px solid #A4A29E;
+}
+
+/* Grateful For */
+.grateful {
+    margin-bottom: 2rem;
+}
+.grateful-list-item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #A4A29E;
+}
+
+/* Notes */
+
+textarea {
+    height: 100px;
+    border-color: #A4A29E;
 }
