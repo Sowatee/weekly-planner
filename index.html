@@ -1,79 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Weekly Planner</title>
 </head>
+
 <body>
+    <button class="print-btn" onclick="window.print();">Print</button>
     <div class="container">
         <header>
-            <h1>Weekly Planner</h1>
+            <h1 class="page-title">Weekly Planner</h1>
             <div class="week">
                 <span class="section-header">Week:</span>
                 <input type="text" />
             </div>
         </header>
-        
+
         <section class="schedule">
             <span class="section-header">schedule and events</span>
-            <div class="schedule-box">hi</div>
-            <div class="schedule-box">by</div>
-            <div class="schedule-box">s</div>
-            <div class="schedule-box">df</div>
-            <div class="schedule-box">df</div>
-            <div class="schedule-box">ff</div>
-            <div class="schedule-box">ff</div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">monday:</span>
+                <textarea></textarea>
+            </div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">tuesday:</span>
+                <textarea></textarea>
+            </div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">wednesday:</span>
+                <textarea></textarea>
+            </div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">thursday:</span>
+                <textarea></textarea>
+            </div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">friday:</span>
+                <textarea></textarea>
+            </div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">saturday:</span>
+                <textarea></textarea>
+            </div>
+            <div class="schedule-box">
+                <span class="schedule-box-header">sunday:</span>
+                <textarea></textarea>
+            </div>
+
         </section>
-        
+
         <div class="right-side">
-                <section class="to-do">
-                    <span class="section-header">To Do List</span>
+            <section class="to-do">
+                <span class="section-header">To Do List</span>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </section>
+
+            <section class="grateful">
+                <span class="section-header">5 things i'm greateful for</span>
+                <div class="grateful-list-item">
+                    <span>1.</span>
                     <input type="text">
+                </div>
+                <div class="grateful-list-item">
+                    <span>2.</span>
                     <input type="text">
+                </div>
+                <div class="grateful-list-item">
+                    <span>3.</span>
                     <input type="text">
+                </div>
+                <div class="grateful-list-item">
+                    <span>4.</span>
                     <input type="text">
+                </div>
+                <div class="grateful-list-item">
+                    <span>5.</span>
                     <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                </section>
-                
-                <section class="grateful">
-                    <span class="section-header">5 things i'm greateful for</span>
-                    <div class="grateful-list-item">
-                        <span>1.</span>
-                        <input type="text">
-                    </div>
-                    <div class="grateful-list-item">
-                        <span>2.</span>
-                        <input type="text">
-                    </div>
-                    <div class="grateful-list-item">
-                        <span>3.</span>
-                        <input type="text">
-                    </div>
-                    <div class="grateful-list-item">
-                        <span>4.</span>
-                        <input type="text">
-                    </div>
-                    <div class="grateful-list-item">
-                        <span>5.</span>
-                        <input type="text">
-                    </div>
-                </section>
-                
-                <section class="notes">
-                    <span class="section-header">Notes</span>
-                    <textarea></textarea>
-                </section>
+                </div>
+            </section>
+
+            <section class="notes">
+                <span class="section-header">Notes</span>
+                <textarea></textarea>
+            </section>
         </div>
 
     </div>
 
 
 </body>
+
 </html>
