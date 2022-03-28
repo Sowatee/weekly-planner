@@ -4,22 +4,33 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #66645F;
+    -webkit-print-color-adjust: exact;
 }
 
 body * {
-    background-color: rgb(211, 207, 207);
+    background-color: lightgrey;
 }
 
 input {
     border: none;
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline: none;
 }
 
+textarea {
+    height: 100px;
+    border-color: #A4A29E;
+    resize: none;
+    overflow-y: hidden;
+}
+
+
 .section-header {
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .container {
@@ -27,8 +38,7 @@ input:focus {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 703px;
-    height: 100vh;
-    border: 4px solid #000;
+    border: 2px solid #000;
     margin: auto;
 }
 
@@ -38,17 +48,33 @@ header {
     grid-column: span 2;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 3em;
 }
+
+.page-title {
+    font-family: 'Inspiration', cursive;
+    color: #000;
+    letter-spacing: .2em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 
 .week {
     display: flex;
     flex-direction: column;
 }
 
+.week .section-header {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
 .week input {
-    height: 30px;
-    border-bottom: 1px solid #000000;
-    text-align: center;
+    height: 20px;
+    border-bottom: 1px solid #000;
 }
 
 .week input:focus {
@@ -61,15 +87,35 @@ header {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
 .schedule-box {
+    display: flex;
+    flex-direction: column;
     height: 100px;
     width: 100%;
-    background-color: #A5A39F;
     margin-bottom: 10px;
 }
+
+.schedule-box textarea {
+    border: none;
+}
+.schedule-box:nth-last-child(-n+2) .schedule-box-header {
+    background-color: #c4c4c4;
+}
+
+.schedule-box:nth-last-child(-n+2) textarea {
+    background-color: #c4c4c4;
+}
+
+.schedule-box-header {
+    text-transform: lowercase;
+}
+
+.schedule-box textarea, .schedule-box-header {
+    background-color: #B3B1AE;
+}
+
 
 /* Right Side */
 
@@ -84,6 +130,7 @@ header {
 
 .to-do {
     margin-bottom: 2rem;
+    grid-row: span 2;
 }
 
 .to-do input {
@@ -94,6 +141,7 @@ header {
 .grateful {
     margin-bottom: 2rem;
 }
+
 .grateful-list-item {
     display: flex;
     flex-direction: row;
@@ -102,9 +150,23 @@ header {
 
 /* Notes */
 
-textarea {
-    height: 100px;
-    border-color: #A4A29E;
-    resize: none;
-    overflow-y: hidden;
+.notes textarea {
+    height: 320px;
+}
+
+/* Print Button */
+
+.print-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media print {
+    .print-btn {
+        display: none;
+    }
 }
